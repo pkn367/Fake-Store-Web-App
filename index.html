@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FakeStore E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MyFakeStore</div>
+    <input type="text" id="searchInput" placeholder="Search products..." />
+    <button id="darkToggle">🌙</button>
+    <div id="cartBtn">🛒 (<span id="cartCount">0</span>)</div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Welcome to MyFakeStore</h1>
+    <p>Browse top products from FakeStore API!</p>
+    <button id="shopNow">Shop Now</button>
+  </section>
+
+  <!-- Filter Bar -->
+  <section class="filters">
+    <select id="categoryFilter"></select>
+    <input type="range" id="priceFilter" min="10" max="1000" value="1000" />
+    <span>Max ₹<span id="priceValue">1000</span></span>
+  </section>
+
+  <!-- Product Grid -->
+  <section id="productGrid" class="grid"></section>
+
+  <!-- Product Detail Modal -->
+  <div id="productModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <img id="modalImg" alt="" />
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <h3 id="modalPrice"></h3>
+      <button id="addToCartBtn">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Cart Section -->
+  <section id="cartSection" class="hidden cart">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <div class="cart-total">
+      Total: ₹<span id="cartTotal">0</span>
+    </div>
+    <button id="clearCart">Clear Cart</button>
+  </section>
+
+  <footer>Built using FakeStore API</footer>
+  <script src="script.js"></script>
+</body>
+</html>
